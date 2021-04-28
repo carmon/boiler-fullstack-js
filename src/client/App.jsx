@@ -7,7 +7,7 @@ const App = ({ color }) => {
   const [title, setTitle] = useState('Loading.. please wait!');
 
   useEffect(async () => {
-    const result = await fetch('/api/getTitle');
+    const result = await fetch('/api/title');
     const json = await result.json();
     setTitle(json.title);
   }, []);
