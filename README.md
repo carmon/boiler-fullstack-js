@@ -3,11 +3,25 @@ Carmon's fullstack boilerplate
 
 > It's dangerous to go alone. Take this.
 
-This is general purpose boilerplate, to kickstart a JS app with a minimal client & server side. 
-The stack is nodemon running express-js in the server, and a webpack dev server running reactjs 
-with hot module reloading in the client. To take a quick look at the bolierplate you can run 
-`npm run publish` command, but concurrently will not work with hot module reload, ideally you 
-should run `npm run client` and `npm run server` in 2 different terminals. Do not use this in
-production, it's just a kickstart repository for quick prototypes. 
+This is general purpose boilerplate, to kickstart a JS app with a minimal client & server side.
+
+### Stack
+
+- backend: **nodemon** runs **express-js** app
+- frontend: **webpack** 4+ runs **reactjs**
+
+### Quick look command
+
+- `npm run publish`: uses concurrently to run server & client, don't expect to have hot module reloading
+
+### How do I develop?
+
+Run these two in parallel:
+- `npm run client`: webpack dev server 
+- `npm run server`: express-js http server
+
+### Tests?
+
+`.http` files are not properly *test files*, they are like *try files*, download **REST client** plugin for **VSCode**, and with a simple shortcut you'll have a way to try your local endpoints inside that IDE and get immediate feedback (more info [here](https://github.com/Huachao/vscode-restclient)). Check those files under `/test` folder.
 
 So long.
